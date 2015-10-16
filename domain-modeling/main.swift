@@ -46,52 +46,6 @@ struct Money {
     }
 }
 
-class Job {
-    var title: String
-    var salary: Double
-    var salaryType: String
+class Family {
     
-    init (title: String, salary: Double, salaryType: String) {
-        self.title = title;
-        self.salary = salary;
-        self.salaryType = salaryType;
-    }
-    
-    var plummer = Job(title: "plummer", salary: 30000, salaryType: "per-year")
-}
-
-class Person {
-    var firstName: String
-    var lastName: String
-    var age: Int
-    var job: Job?
-    var spouse: Person?
-    
-    init(firstName: String, lastName: String, age: Int, job: Job?, spouse: Person?) {
-        self.firstName = firstName
-        self.lastName = lastName
-        self.age = age
-        self.setSpouse(spouse)
-        self.setJob(job)
- 
-    }
-    func setJob(job: Job?) {
-        if age >= 16 {
-            self.job = job
-        }
-    }
-    
-    func setSpouse(spouse: Person?) {
-        if age >= 18 {
-            self.spouse = spouse
-        }
-    }
-    
-    func getJob() -> Job? {
-        return job
-    }
-    
-    func getSpouse() -> Person? {
-        return spouse
-    }
 }
