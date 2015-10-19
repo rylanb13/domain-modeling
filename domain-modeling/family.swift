@@ -15,7 +15,7 @@ class Family {
         self.family = family
     }
     
-    func householdIncome(family: [Person]) -> Float {
+    func householdIncome() -> Float {
         var income = Float(0.0)
         for var index = 0; index < family.count; index++ {
             if (family[index].getJob() != nil) {
