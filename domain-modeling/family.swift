@@ -25,4 +25,14 @@ class Family {
         return income;
     }
     
+    private var legal : Bool {
+        get {
+            for var index = 0; index < family.count; index++ {
+                if (family[index].age > 21) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
 }
