@@ -19,17 +19,14 @@ class Job {
         self.salaryType = salaryType;
     }
     
-    func calculateIncome(hours: Float, job: Job) -> Float {
-        var salary = job.salary
-        if job.salaryType == "per-hour" {
+    func calculateIncome(hours: Float) -> Float {
+        if salaryType == "per-hour" {
             salary = salary * hours
         }
         return salary;
     }
     
     func raise(perc: Float) {
-        salary = salary * (1.0 + perc)
+        salary += salary * perc;
     }
-    
-    var plummer = Job(title: "plummer", salary: 30000, salaryType: "per-year")
 }

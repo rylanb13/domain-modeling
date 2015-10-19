@@ -60,6 +60,15 @@ struct Money {
         }
     }
     
+    mutating func add(var addValue: Money) {
+        addValue.changeCurrency(currency);
+        value += addValue.value;
+    }
+    
+    mutating func subtract(var subtractValue: Money) {
+        subtractValue.changeCurrency(currency);
+        value -= subtractValue.value;
+    }
 }
 
 var test = Money(value: 2.00, currency: .GBP)
