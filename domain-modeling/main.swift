@@ -62,6 +62,30 @@ testSubtractMoney(CurrencyType.CAN, secondType: CurrencyType.CAN)
 
 
 
+print("People");
+let fianceGirl = Person(firstName: "Jenny", lastName: "Landingin", age: 30);
+print(fianceGirl.toString());
+let fianceBoy = Person(firstName: "Rylan", lastName: "Bonnevie", age: 31);
+print(fianceBoy.toString());
+print("Marry Poeple");
+fianceGirl.setSpouse(fianceBoy);
+fianceBoy.setSpouse(fianceGirl);
+print("Jobs");
+let nurse = Job(title: "Nurse", salary: 70000, salaryType: "per-year");
+let hm = Job(title: "H&M Employee", salary: 15, salaryType: "per-hour");
+fianceGirl.setJob(nurse);
+fianceBoy.setJob(hm);
+print("Family");
+let myFamily = Family(family: fianceGirl, fianceBoy);
+print("Income: \(myFamily.householdIncome())");
+print("Children");
+myFamily.haveChild("Kevin", childLName: "Ke");
+print("There are now \(myFamily.family.count) family members");
+
+
+
+
+
 
 
 
