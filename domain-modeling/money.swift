@@ -22,6 +22,7 @@ struct Money {
     
     mutating func changeCurrency (changeType: CurrencyType) {
         if currency != changeType {
+            valueToCurrencyType(changeType);
             currency = changeType
         }
     }
@@ -63,4 +64,5 @@ struct Money {
 
 var test = Money(value: 2.00, currency: .GBP)
 var test2 = test.makeUSD()
+
 
