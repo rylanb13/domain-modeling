@@ -23,6 +23,7 @@ class Job {
         if salaryType == "per-hour" {
             salary = salary * hours
         }
+        // salaryType = "per-year"
         return salary;
     }
     
