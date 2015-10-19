@@ -21,8 +21,8 @@ class Person {
         self.age = age
         self.setSpouse(spouse)
         self.setJob(job)
-        
     }
+    
     func setJob(job: Job?) {
         if age >= 16 {
             self.job = job
