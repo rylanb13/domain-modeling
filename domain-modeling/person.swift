@@ -41,4 +41,8 @@ class Person {
     func getSpouse() -> Person? {
         return spouse
     }
+    
+    func toString() -> String {
+        return "\(firstName) \(lastName) Age: \(age)."
+    }
 }
