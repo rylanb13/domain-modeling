@@ -12,15 +12,14 @@ class Person {
     var firstName: String
     var lastName: String
     var age: Int
-    var job: Job?
-    var spouse: Person?
     
-    init(firstName: String, lastName: String, age: Int, job: Job?, spouse: Person?) {
+    private var job: Job?
+    private var spouse: Person?
+    
+    init(firstName: String, lastName: String, age: Int) {
         self.firstName = firstName
         self.lastName = lastName
         self.age = age
-        self.setSpouse(spouse)
-        self.setJob(job)
     }
     
     func setJob(job: Job?) {
