@@ -9,5 +9,7 @@
 
 import Foundation
 
+print(test2);
+
 
 

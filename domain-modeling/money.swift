@@ -26,6 +26,11 @@ struct Money {
         }
     }
     
+    init (value: Double, currency: CurrencyType) {
+        self.value = value;
+        self.currency = currency
+    }
+    
     func makeUSD() -> Double {
         switch currency {
         case .USD:
@@ -38,4 +43,24 @@ struct Money {
             return 4.0 * value / 5.0;
         }
     }
+    
+    mutating func valueToCurrencyType (changeType: CurrencyType) {
+        let constantForUSD = makeUSD();
+        
+        switch changeType {
+        case .USD:
+            value = constantForUSD
+        case .EUR:
+            value = 1.5 * constantForUSD
+        case .GBP:
+            value = 0.5 * constantForUSD
+        case .CAN:
+            value = 1.25 * constantForUSD
+        }
+    }
+    
 }
+
+var test = Money(value: 2.00, currency: .GBP)
+var test2 = test.makeUSD()
+
