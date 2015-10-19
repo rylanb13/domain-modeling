@@ -17,7 +17,25 @@ enum CurrencyType {
 
 struct Money {
     
-    var amount : Double;
+    var value : Double;
     var currency : CurrencyType
     
+    mutating func changeCurrency (changeType: CurrencyType) {
+        if currency != changeType {
+            currency = changeType
+        }
+    }
+    
+    func makeUSD() -> Double {
+        switch currency {
+        case .USD:
+            return value;
+        case .EUR:
+            return 2.0 * value / 3.0;
+        case .GBP:
+            return 2.0 * value;
+        case .CAN:
+            return 4.0 * value / 5.0;
+        }
+    }
 }
