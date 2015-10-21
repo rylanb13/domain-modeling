@@ -1,5 +1,5 @@
 //
-//  CustomStringConvertible.swift
+//  Mathematics.swift
 //  domain-modeling
 //
 //  Created by Rylan Bonnevie on 10/20/15.
@@ -7,9 +7,3 @@
 //
 
 import Foundation
-
-protocol CustomStringConvertible {
-    var description: String { get }
-}
-
-

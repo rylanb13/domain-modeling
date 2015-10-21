@@ -16,6 +16,12 @@ class Person : CustomStringConvertible {
     private var job: Job?
     private var spouse: Person?
     
+    var description : String {
+        get {
+            return toString()
+        }
+    }
+    
     init(firstName: String, lastName: String, age: Int) {
         self.firstName = firstName
         self.lastName = lastName
@@ -44,9 +50,5 @@ class Person : CustomStringConvertible {
     
     func toString() -> String {
         return "\(firstName) \(lastName) Age: \(age)."
-    }
-    
-    func description() -> String {
-        return toString()
     }
 }
